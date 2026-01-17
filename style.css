@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.head{
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    font-size: 23px;
+    font-display:block;
+    display:flex;
+ 
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+}
+
+.head img{
+    margin: 3px;
+    height: 3%;
+    width: 4%;
+}
+
+.head h1{
+    font-size: 120%;
+    color: rgb(67, 15, 110);
+    margin-right: 300px;
+}   
+
+.head nav ul{
+    margin: 0 25px;;
+    color: rgb(49, 26, 80);
+    display: flex;
+    gap: 6%;
+}
+.image img{
+    height: 18%;
+    width: 100%;
+}
+
+.main{
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+
+}

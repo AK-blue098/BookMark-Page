@@ -4,16 +4,17 @@
     box-sizing: border-box;
 }
 
-.body{
+body{
     background-color: #f3f4ff;
 }
 
 .head{
     background-color: #0f172a;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 23px; 
     display:flex;
     align-items: center;
+    gap: 20px;
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -23,7 +24,6 @@
 .menu-btn{
     font-size: 28px;
     cursor: pointer;
-    padding: 10px;
     color: white;
     position: fixed;
     top: 10px;
@@ -58,10 +58,82 @@
     background: rgba(255,255,255,0.1);
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 4000;
+}
+
+.search-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.search-icon{
+    font-size: 38px;
+    cursor: pointer;
+    color: white;
+    margin-left: 25px;
+}
+
+#searchInput{
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    margin-left: 8px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.search-box.active #searchInput{
+    width: 220px;
+    opacity: 1;     
+    padding: 8px 12px;
+}
+
+#suggestions {
+  position: absolute;
+  top: 45px;
+  left: 35px;
+  background: white;
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 5000;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #6366f1;
+  color: white;
+}
+
 .head img{
-    margin: 2px;
     height: 50px;   
     width: 250px;
+}
+
+.head nav{
+    margin-left: auto;
+    margin-right: 20px;
 }
 .head nav ul{
     padding: 0;
@@ -80,14 +152,15 @@
     padding: 8px 14px;
     border-radius: 6px;
     font-weight: 500;
+    margin-right: 25px;
+    gap: 15px;
 }
 
 .icon-container{
-    border: solid 8px rgba(29, 11, 189, 0.541);
-    width: 38%;
-    height: 90%;
+    border: solid 8px #2a4074;
+    width: 50%;
+    height: 125%;
     position: absolute;
-    /* background-color: rgba(29, 11, 189, 0.541); */
     background-image: url(images/iconbackground.jpg);
     background-position: center;
     background-size: cover;
